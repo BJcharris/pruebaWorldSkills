@@ -19,12 +19,6 @@ class Home : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         val gson= Gson()
         val categorias:Categorias=gson.fromJson(CategoriasJSON().onCreate(),Categorias::class.java)
-        val categoriasList= arrayListOf<String>()
-        var i=0
-        while (i<=categorias.datos.count()){
-            categoriasList[i]=categorias.datos.get(i).nombre
-            i++
-        }
     }
 
 }
