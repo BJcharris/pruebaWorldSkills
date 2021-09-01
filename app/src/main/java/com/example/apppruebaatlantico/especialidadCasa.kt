@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import com.example.apppruebaatlantico.ComsumeApis.EndPointsEspecialidad
 import com.example.apppruebaatlantico.ComsumeApis.NetworksUtils
 import com.example.apppruebaatlantico.ComsumeApis.PostEspecialidad
@@ -37,14 +38,14 @@ class especialidadCasa : AppCompatActivity() {
         val callback=endpoint.getPosts()
         callback.enqueue(object :Callback<PostEspecialidad>{
             override fun onFailure(call: Call<PostEspecialidad>, t: Throwable) {
-                println("No me responde")
+                Toast.makeText(baseContext,"ERROR, ${t.message}",Toast.LENGTH_SHORT).show()
             }
 
             override fun onResponse(
                 call: Call<PostEspecialidad>,
                 response: Response<PostEspecialidad>
             ) {
-                println("Si me responde")
+                println(response.body())
             }
         })
     }
