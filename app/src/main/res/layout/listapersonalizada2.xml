@@ -3,47 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="190dp">
+    android:layout_height="210dp">
 
     <ImageView
         android:id="@+id/imagenProd"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="51dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="13dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvnombrecat"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="114dp"
+        android:layout_height="144dp"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="23dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tvnombrecat"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="86dp"
-        android:layout_marginBottom="22dp"
+        android:layout_width="114dp"
+        android:layout_height="40dp"
         android:fontFamily="@font/amaranth_italic"
         android:text="Nombre producto"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvprecio"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imagenProd"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="23dp" />
 
     <TextView
         android:id="@+id/tvprecio"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="158dp"
+        android:layout_height="38dp"
         android:text="aqui va el precio"
         android:textColor="#D1C4E9"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvnombrecat"
-        app:layout_constraintStart_toStartOf="@+id/tvnombrecat"
-        app:layout_constraintTop_toBottomOf="@+id/tvnombrecat" />
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="129dp" />
+
+    <TextView
+        android:id="@+id/tvdescripcion2"
+        android:layout_width="114dp"
+        android:layout_height="40dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="77dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

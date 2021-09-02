@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppPruebaAtlantico">
         <activity
-            android:name=".MostrarProductos"
+            android:name=".Verproductodecategoria"
             android:exported="true"
             android:theme="@style/Theme.ActionBar"/>
         <activity

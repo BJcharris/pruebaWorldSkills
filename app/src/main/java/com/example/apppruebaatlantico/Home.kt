@@ -24,15 +24,13 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         val bundle=intent.extras
+        findViewById<TextView>(R.id.tvuser).setText(bundle?.getString("nombres"))
 
         getdataCategorias()
 
         findViewById<ListView>(R.id.listcategorias).setOnItemClickListener { adapterView, view, i, l ->
-            val intent=Intent(this,MostrarProductos::class.java).apply {
-                putExtra("url",registro.get(i).url_imagen)
-                putExtra("id",registro.get(i).id)
-                putExtra("nombre",registro.get(i).nombre)
-                putExtra("descripcion",registro.get(i).descripcion)
+            val intent=Intent(this,Verproductodecategoria::class.java).apply {
+                putExtra("ID",registro.get(i).id)
             }
             startActivity(intent)
         }

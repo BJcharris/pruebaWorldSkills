@@ -5,17 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
-import com.bumptech.glide.Glide
-import com.example.apppruebaatlantico.Clases.categoria
-import kotlinx.android.synthetic.main.activity_mostrar_productos.*
 
-class MostrarProductos : AppCompatActivity() {
+class Verproductodecategoria : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mostrar_productos)
-        //val bundle=intent.extras
-
+        setContentView(R.layout.activity_verproductodecategoria)
     }
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menubar,menu)
@@ -33,6 +27,7 @@ class MostrarProductos : AppCompatActivity() {
             }
             R.id.item2->{
                 startActivity(Intent(this,Login::class.java))
+                finish()
                 true
             }
             R.id.itembag->{
