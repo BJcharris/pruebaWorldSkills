@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">AppPruebaAtlantico</string>
+    <string name="item1">Mis pedidos</string>
+    <string name="item2">Cerrar sesion</string>
+    <string name="item3">Home</string>
+    <string name="item4">Bag</string>
     <string-array name="spinner">
         <item>Seleccione categoria</item>
         <item>Platos</item>
         <item>Bebidas</item>
     </string-array>
-    <string-array name="lista">
-    </string-array>
+    <string-array name="lista"></string-array>
 </resources>

@@ -17,7 +17,7 @@ class condicionesuser : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_condicionesuser)
         val preferencias=getSharedPreferences("politicas", Context.MODE_PRIVATE)
-        val texto=preferencias.getString("texto",null)
+        val texto=preferencias.getString("politics",null)
         findViewById<TextView>(R.id.tvpoliticas).setText(texto)
         findViewById<Button>(R.id.btnaceptar).setOnClickListener {
             val bundle=intent.extras
@@ -31,7 +31,13 @@ class condicionesuser : AppCompatActivity() {
             registro.put("activo",false)
             bd.insert("usuarios",null, registro)
             bd.close()
-            alertDialog("BIENVENIDO","Su registro fue exitoso,user:${bundle?.getString("name")}")
+            Toast.makeText(this,"Usuario registrado con exito",Toast.LENGTH_SHORT).show()
+            val intent=Intent(this,especialidadCasa::class.java).apply {
+                putExtra("nombres",bundle?.getString("name"))
+                putExtra("mail",bundle?.getString("email"))
+            }
+            startActivity(intent)
+            finish()
         }
         findViewById<Button>(R.id.btnrechazar).setOnClickListener {
             Toast.makeText(this,"Su cuenta no pudo ser creada",Toast.LENGTH_SHORT).show()

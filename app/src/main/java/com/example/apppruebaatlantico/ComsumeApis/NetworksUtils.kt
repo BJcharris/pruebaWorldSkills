@@ -5,11 +5,9 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworksUtils {
     companion object{
-        fun getRetrofirInstace(path:String): Retrofit {
-            return Retrofit.Builder()
-                .baseUrl(path)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
+        fun getRetrofitInstance():Retrofit{
+            return Retrofit.Builder().baseUrl("https://wsc.fabricasoftware.co")
+                .addConverterFactory(GsonConverterFactory.create()).build()
         }
     }
 }

@@ -22,15 +22,20 @@ class Login : AppCompatActivity() {
             if (!email.text.isEmpty() && !pass.text.isEmpty()){
                 val admin= AdminSQLiteOpenHelper(this,"restaurante",null,1)
                 val bd=admin.writableDatabase
-                val consulta=bd.rawQuery("SELECT contraseña FROM usuarios WHERE email='${email.text}'",null)
+                val consulta=bd.rawQuery("SELECT nombres,contraseña FROM usuarios WHERE email='${email.text}'",null)
                 if(consulta.moveToFirst()){
-                    if (consulta.getString(0).equals(pass.text.toString())){
+                    if (consulta.getString(1).equals(pass.text.toString())){
                         val editor=preferencias.edit()
                         editor.putString("user",email.text.toString())
                         editor.putString("pass",pass.text.toString())
                         editor.commit()
+                        val intent=Intent(this,especialidadCasa::class.java).apply {
+                            putExtra("nombres",consulta.getString(0))
+                            putExtra("mail",email.text.toString())
+                        }
+                        startActivity(intent)
+                        finish()
                         Toast.makeText(this,"se le a activado el recuerdame en su cuenta",Toast.LENGTH_SHORT).show()
-                        startActivity(Intent(this,especialidadCasa::class.java))
                     }else{
                         Toast.makeText(this,"Contraseña incorrecta",Toast.LENGTH_SHORT).show()
                     }
@@ -44,8 +49,6 @@ class Login : AppCompatActivity() {
         findViewById<Button>(R.id.registrar).setOnClickListener {
             val intent=Intent(this,Registrar::class.java)
             startActivity(intent)
-            findViewById<EditText>(R.id.etemail).setText(null)
-            findViewById<EditText>(R.id.etcontraseña).setText(null)
         }
     }
 

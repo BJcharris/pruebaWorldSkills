@@ -6,30 +6,45 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".especialidadCasa">
+    tools:context=".especialidadCasa"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Receta del dia"
-        android:fontFamily="@font/artifika"
+        android:fontFamily="@font/boogaloo"
         android:gravity="center"
-        android:textColor="#A30303"
-        android:textSize="27sp"/>
+        android:text="Especialiad de la casa"
+        android:textColor="#F1E3DE"
+        android:textSize="34sp" />
 
     <ImageView
         android:id="@+id/imagen"
-        android:layout_width="276dp"
-        android:layout_height="299dp"
+        android:layout_width="278dp"
+        android:layout_height="271dp"
         app:srcCompat="@drawable/especialidad" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/anton"
+        android:text="Informacion del plato:"
+        android:textColor="#E1F5FE"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tvdescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"

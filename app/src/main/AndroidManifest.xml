@@ -12,23 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppPruebaAtlantico">
         <activity
+            android:name=".MostrarProductos"
+            android:exported="true"
+            android:theme="@style/Theme.ActionBar"/>
+        <activity
             android:name=".Home"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.ActionBar" />
         <activity
             android:name=".especialidadCasa"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.NoactionBar" />
         <activity
             android:name=".condicionesuser"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.NoactionBar" />
         <activity
             android:name=".Registrar"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.NoactionBar" />
         <activity
             android:name=".Login"
-            android:exported="true" />
+            android:exported="true"
+            android:theme="@style/Theme.NoactionBar" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.NoactionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

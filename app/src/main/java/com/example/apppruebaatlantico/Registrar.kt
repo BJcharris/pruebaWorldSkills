@@ -20,11 +20,7 @@ class Registrar : AppCompatActivity() {
             val ciudad=findViewById<EditText>(R.id.etciudad)
             val contraseña=findViewById<EditText>(R.id.etcontraseña2)
             val confirmar=findViewById<EditText>(R.id.etvuelvecontraseña)
-            if (!nombre.text.isEmpty() && !correo.text.isEmpty() && !ciudad.text.isEmpty() && !contraseña.text.isEmpty() && !confirmar.text.isEmpty()){
-                println("Resultados")
-                println(contraseña.text)
-                println(confirmar.text)
-                println(contraseña.text.equals(confirmar.text))
+            if (!nombre.text.isEmpty() && !correo.text.isEmpty() && !contraseña.text.isEmpty() && !confirmar.text.isEmpty() && !ciudad.text.isEmpty()){
                 if (contraseña.text.toString().equals(confirmar.text.toString())){
                     val intent=Intent(this,condicionesuser::class.java).apply {
                         putExtra("name",nombre.text.toString())
@@ -33,11 +29,12 @@ class Registrar : AppCompatActivity() {
                         putExtra("contraseña",contraseña.text.toString())
                     }
                     startActivity(intent)
+                    finish()
                 }else{
                     alertDialog("INFROMACION","CONTRASEÑA NO COINCIDEN")
                 }
             }else{
-                Toast.makeText(this,"Faltan datos por llenar",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"Faltan campos por llenar",Toast.LENGTH_SHORT).show()
             }
         }
         findViewById<Button>(R.id.btniniciar).setOnClickListener {
@@ -45,6 +42,7 @@ class Registrar : AppCompatActivity() {
         }
 
     }
+    //Alertas
      fun alertDialog(title:String,message:String){
         val alerta=AlertDialog.Builder(this)
         alerta.setTitle(title)

@@ -4,47 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".condicionesuser">
+    tools:context=".condicionesuser"
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/artifika"
+        android:fontFamily="@font/boogaloo"
         android:gravity="center"
         android:text="POLITICAS DE USUARIO"
-        android:textColor="#A30303"
-        android:textSize="27sp" />
+        android:textColor="#F1E3DE"
+        android:textSize="34sp" />
 
     <TextView
         android:id="@+id/tvpoliticas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/architects_daughter"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:background="#75736C"
+        android:fontFamily="@font/basic"
         android:gravity="center"
-        android:text="TextView" />
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnaceptar"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="#A30303"
+            android:backgroundTint="#A62B06"
+            android:fontFamily="@font/chicle"
             android:text="Aceptar" />
 
         <Button
             android:id="@+id/btnrechazar"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:backgroundTint="#A30303"
+            android:backgroundTint="#A62B06"
+            android:fontFamily="@font/chicle"
             android:text="Rechazar" />
     </LinearLayout>
 </LinearLayout>

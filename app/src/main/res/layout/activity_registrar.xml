@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".Registrar">
 
@@ -11,12 +13,11 @@
         android:id="@+id/tv2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:fontFamily="@font/artifika"
+        android:fontFamily="@font/boogaloo"
         android:gravity="center"
         android:text="Formulario de Registro"
-        android:textColor="#A30303"
-        android:textSize="27sp"/>
+        android:textColor="#FFFFFF"
+        android:textSize="34sp" />
 
     <EditText
         android:id="@+id/etname"
@@ -25,23 +26,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese su nombre completo"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etciudad"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"
-        android:ems="10"
-        android:hint="Ingrese su ciudad"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/etcorreo"
@@ -50,10 +44,15 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese la correo"
-        android:inputType="textPersonName"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -63,11 +62,16 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:hint="Ingrese contraseña"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:password="true"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -77,32 +81,54 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
-        android:hint="Ingrese otra ve su contraseña"
+        android:hint="Ingrese otra vez su contraseña"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:password="true"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/etciudad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:hint="Ingrese su ciudad"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#009688" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="18dp">
+        android:layout_marginTop="18dp"
+        android:gravity="center">
 
         <Button
             android:id="@+id/btnregistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="20dp"
-            android:text="Registrar"
-            android:backgroundTint="#A30303"/>
+            android:backgroundTint="#A62B06"
+            android:text="Registrarse" />
 
         <Button
             android:id="@+id/btniniciar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Iniciar Sesion"
-            android:backgroundTint="#A30303"/>
+            android:backgroundTint="#A62B06"
+            android:text="Iniciar Sesion" />
     </LinearLayout>
 </LinearLayout>
